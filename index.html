@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiktok Clone</title>
+    <link rel="Stylesheet" href = "style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+    <div class="app__videos">
+        <!-- video starts -->
+        <div class="video">
+          <video class="video__player" src="video1.mp4"></video>
+  
+          <!-- sidebar -->
+          <div class="videoSidebar"> <!-- icones-->
+            <div class="videoSidebar__button">
+              <span class="material-icons"> favorite_border </span> <!-- botão de curtidas -->
+              <!--Tag Span : Na prática, a tag span serve para que você seja capaz de representar elementos visuais destacados de um todo e não representa nada por natureza.-->
+              <p>12</p><!-- Número de curtidas-->
+            </div>
+            <!-- Botão de Curtir-->
+            <div class="videoSidebar__button">
+              <span class="material-icons"> message </span> <!-- botão de comentários -->
+              <p>23</p> <!-- Número de Mensagens-->
+           </div>
+  
+            <div class="videoSidebar__button">
+              <span class="material-icons"> share </span> <!-- Botão de Compartilhamento-->
+              <p>75</p> <!-- Número de Compartilhamento-->
+            </div>
+          </div>
+  
+          <!-- Inicio Video Footer --> <!-- parte de baixo do vídeo-->
+          <div class="videoFooter">
+            <div class="videoFooter__text"> <!-- Div para titulo do Vídeo-->
+              <h3>Codi Academy</h3> <!--Nome do Usúario-->
+              <p class="videoFooter__description">Motivação do programador</p>
+  
+              <div class="videoFooter__ticker"> <!-- irá pegar o icone do CD -->
+                <span class="material-icons vi__icon"> music_note </span> <!-- irá pegar o icone do CD  e Formata -->
+                <marquee>Nome da Música</marquee> <!-- é usado para inserir uma área de rolagem de texto"scrolling" , similar a um letreiro. -->
+              </div>
+            </div>
+            <img 
+              src="https://static.thenounproject.com/png/934821-200.png"
+              alt=""
+              class="videoFooter__record"
+              />
+              <!-- adicionando imagem e adicionando class na mesma-->
+          </div>
+        </div>
+        <!-- Final do videofooter -->
+        
+  
+        <!-- video starts -->
+        <div class="video">
+          <video class="video__player" src="video2.mp4"></video>
+  
+          <!-- sidebar -->
+          <div class="videoSidebar">
+            <div class="videoSidebar__button">
+              <span class="material-icons"> favorite_border </span>
+              <p>12</p>
+            </div>
+  
+            <div class="videoSidebar__button">
+              <span class="material-icons"> message </span>
+              <p>23</p>
+            </div>
+  
+            <div class="videoSidebar__button">
+              <span class="material-icons"> share </span>
+              <p>75</p>
+            </div>
+          </div>
+  
+          <!-- footer -->
+          <div class="videoFooter">
+            <div class="videoFooter__text">
+              <h3>Codi Academy</h3>
+              <p class="videoFooter__description">Foco nos Objetivos</p>
+  
+              <div class="videoFooter__ticker">
+                <span class="material-icons videoFooter__icon"> music_note </span>
+                <marquee>Nome da Música</marquee>
+              </div>
+            </div>
+            <img
+              src="https://static.thenounproject.com/png/934821-200.png"
+              alt=""
+              class="videoFooter__record"
+            />
+          </div>
+        </div>
+        <!-- video ends -->
+      </div>
+  
+      <script type="text/javascript">
+        const videos = document.querySelectorAll('video');
+  
+        for (const video of videos) {
+          video.addEventListener('click', function () {
+            console.log('clicked');
+            if (video.paused) {
+              video.play();
+            } else {
+              video.pause();
+            }
+          });
+        }
+      </script>
+
+    
+</body>
+</html>
